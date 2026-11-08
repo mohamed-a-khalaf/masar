@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسار - اتعلم مهارة جديدة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* primary colors */
+            --primary-light: #EEF2FF;
+            --primary-dark: #4338CA;
+            --primary: #4F46E5;
+
+            /* special colors */
+            --accent-light: #FEF3C7;
+            --accent: #F59E0B;
+
+            /* neutral colors */
+            --white: #FFFFFF;
+            --border: #E5E7EB;
+            --gray-light: #F9FAFB;
+            --gray: #6B7280;
+            --dark: #111827;
+
+            /* status colors */
+            --error-light: #FEE2E2;
+            --error: #DC2626;
+            --success-light: #DCFCE7;
+            --success: #10B981;
+
+            /* fonts */
+            --primary-font: 'Cairo', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== Navbar ===== */
+        .navbar {
+            direction: ltr;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .navbar-center {
+            direction: rtl;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .navbar-center a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .navbar-center a:hover,
+        .navbar-center a.active {
+            color: var(--primary);
+        }
+
+        .btn-signup {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 11px 26px;
+            border-radius: 999px;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-signup:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 48px;
+            padding: 72px 0;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.35;
+            color: var(--dark);
+            margin: 24px 0;
+        }
+
+        .hero-text h1 .hl {
+            color: var(--primary);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--gray);
+            line-height: 1.9;
+            max-width: 520px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: var(--white);
+            color: var(--dark);
+            border: 1px solid var(--border);
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .avatars {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .avatars span {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            border: 2px solid var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-left: -10px;
+        }
+
+        .social-proof .proof-text {
+            color: var(--gray);
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .social-proof .proof-text b {
+            color: var(--dark);
+        }
+
+        /* ===== Hero art ===== */
+        .hero-art {
+            display: flex;
+            justify-content: center;
+        }
+
+        .art-card {
+            position: relative;
+            background: var(--white);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 25px 50px -12px rgba(79, 70, 229, 0.25);
+        }
+
+        .art-visual {
+            width: 280px;
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 36px;
+            background: linear-gradient(145deg, #4F46E5 0%, #6D5DE8 45%, #A78BFA 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .art-visual svg {
+            width: 58%;
+            height: auto;
+        }
+
+        .badge {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--white);
+            padding: 10px 16px;
+            border-radius: 999px;
+            box-shadow: 0 10px 25px -5px rgba(17, 24, 39, 0.15);
+            font-weight: 700;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .badge-rating {
+            top: -14px;
+            right: -14px;
+        }
+
+        .badge-courses {
+            bottom: -14px;
+            left: -14px;
+        }
+
+        /* ===== Stats ===== */
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            padding: 20px;
+            
+        }
+
+        .stat .num {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .stat .label {
+            color: var(--gray);
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 56px;
+                padding: 48px 0;
+                text-align: center;
+            }
+
+            .hero-text p {
+                max-width: 100%;
+            }
+
+            .eyebrow,
+            .hero-buttons,
+            .social-proof {
+                justify-content: center;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .hero-art {
+                order: -1;
+            }
+
+            .navbar-center {
+                display: none;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-outline {
+                width: 100%;
+            }
+        }
+        .section-head{
+            justify-items: center;
+        
+             .courses-eyebrow{
+             background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        }
+        .sm-title{
+            font-style: var(--primary-font);
+            font-size: 16px;
+            font-weight: 400px;
+           color: var(--gray);
+           
+        }
+        .first-row{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 24px;
+            padding-top: 35px;
+            padding-inline: 64px;
+        }
+        .card {
+            border: 1px solid rgb(182, 180, 180);
+            border-radius: 24px;
+            border-width: 1px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .logo1{
+            border: 1px ;
+            border-radius: 8px;
+            background-color: rgb(204, 200, 200);
+            padding: 8px 10px;
+            display: inline-block;
+
+        }
+        .h3{
+            text-align: left;
+            font-size: medium;
+            font-style: var(--primary-font);
+        }
+        .card-content{
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgb(189, 186, 186);
+            font-style: var(--primary-font);
+            font-weight: 400;
+            font-size: 15px;
+            color: gray;
+
+        }
+        .card-footer{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding-top: 15px;
+            padding-bottom: 10px;
+        }
+        .price{
+            color: var(--primary);
+        }
+        .weeks{
+             background: var(--gray-light);
+            color: var(--gray);
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+
+
+        }
+        .card-btn{
+          background: var(--gray-light);
+            color: black;
+            padding: 10px;
+            border-radius: 999px;
+            font-size: 15px;
+            font-weight: 700px;
+            font-weight: bold;
+            width: 100%;
+            border: 2px lightgray solid;
+            cursor: pointer;
+            
+            
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <header class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <span>مسار</span>
+                <img src="Public/logo.png" alt="شعار مسار">
+            </a>
+            <div class="navbar-center">
+                <a href="#" class="active">الرئيسية</a>
+                <a href="#">الكورسات</a>
+                <a href="#">ليه مسار</a>
+                <a href="#">تواصل</a>
+            </div>
+            <button class="btn-signup">سجل الآن</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero section -->
+        <section class="hero">
+            <!-- Text (right in RTL) -->
+            <div class="hero-text">
+                <span class="eyebrow">🚀 التسجيل مفتوح للترم الجديد</span>
+                <h1>
+                    اتعلم مهارة <span class="hl">جديدة وابدأ</span>
+                    <span class="hl">رحلتك</span> من النهاردة
+                </h1>
+                <p>
+                    مركز مسار بيقدّم كورسات عملية في البرمجة والتصميم والتسويق
+                    واللغات، بمدرّبين خبراء وشهادات معتمدة بعد كل كورس.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">تصفح الكورسات</button>
+                    <button class="btn-outline">اعرف أكتر</button>
+                </div>
+                <div class="social-proof">
+                    <div class="avatars">
+                        <span>👨‍🎓</span>
+                        <span>👩‍🎓</span>
+                        <span>🧑‍🎓</span>
+                    </div>
+                    <div class="proof-text"><b>+1200</b> طالب بدأوا معانا</div>
+                </div>
+            </div>
+
+            <!-- Art (left in RTL) -->
+            <div class="hero-art">
+                <div class="art-card">
+                    <span class="badge badge-rating">⭐ تقييم 4.9</span>
+                    <div class="art-visual" role="img" aria-label="قبعة التخرج">
+                        <svg viewBox="0 0 120 104" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M40,50 L40,70 C40,78 50,82 60,82 C70,82 80,78 80,70 L80,50 Z" fill="#39324F"/>
+                            <polygon points="60,18 112,40 60,62 8,40" fill="#15121D"/>
+                            <circle cx="60" cy="40" r="4.5" fill="#39324F"/>
+                            <path d="M112,40 L112,70" stroke="#F59E0B" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            <circle cx="112" cy="74" r="6" fill="#F59E0B"/>
+                        </svg>
+                    </div>
+                    <span class="badge badge-courses">🎯 24 كورس</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat">
+                <div class="num">+1200</div>
+                <div class="label">طالب مسجل</div>
+            </div>
+            <div class="stat">
+                <div class="num">24</div>
+                <div class="label">كورس متاح</div>
+            </div>
+            <div class="stat">
+                <div class="num">18</div>
+                <div class="label">مدرب خبير</div>
+            </div>
+            <div class="stat">
+                <div class="num">96%</div>
+                <div class="label">نسبة الرضا</div>
+            </div>
+        </section>
+
+        <!-- courses -->
+        <section>
+            <div class="container">
+                <!-- section head -->
+                 <div class="section-head">
+                    <p class="courses-eyebrow">الكورسات</p>
+                    <h2>اختار المجال اللي يناسبك</h2>
+                    <p class="sm-title">كورسات عملية 100% بمشاريع حقيقية وشهادة معتمدة في نهاية كل كورس.</p>
+                 </div>
+
+                 <!-- hold all cards here -->
+                  <div class="courses">
+                    <!-- first row holding 3 cards -->
+                    <div class="first-row">
+                    <div class="card">
+                        <div class="logo1">💻</div>
+                        <h3 class="h3">تطوير الويب</h3>
+                        <p class="card-content">اتعلم HTML و CSS و JavaScript وابني مواقع كاملة من الصفر.</p>
+                        <div class="card-footer"> <p class="price"> 1200 ج</p> <div class="weeks"> ⏱ 12 أسبوع</div></div>
+                        <button class="card-btn"> التفاصيل</button>
+                    </div>
+                    <div class="card">
+                        <div class="logo1">💻</div>
+                        <div class="h3">تصميم UI / UX</div>
+                        <p class="card-content">من أول الـ Wireframe لحد الـ Prototype باستخدام Figma.</p>
+                        <div class="card-footer"> <p class="price">900 ج</p> <div class="weeks">⏱ 8 أسابيع</div></div>
+                        <button class="card-btn"> التفاصيل</button>
+                    </div>
+                    <div class="card">
+                        <div class="logo1">💻</div>
+                        <div class="h3">التسويق الرقمي</div>
+                        <p class="card-content">استراتيجيات السوشيال ميديا والإعلانات الممولة والـ SEO.</p>
+                        <div class="card-footer"> <p class="price">1000 ج</p> <div class="weeks">⏱ 10 أسابيع</div></div>
+                        <button class="card-btn"> التفاصيل</button>
+                         </div>
+                    </div>
+
+                    <!-- second row holding 3 cards -->
+                      <div class="first-row">
+                    <div class="card">
+                        <div class="logo1">💻</div>
+                        <h3 class="h3">اللغة الإنجليزية</h3>
+                        <p class="card-content">محادثة وقواعد من المستوى المبتدئ لحد المتقدم مع مدرّب أجنبي.</p>
+                        <div class="card-footer"> <p class="price">800 ج</p> <div class="weeks">⏱ 16 أسبوع</div></div>
+                        <button class="card-btn"> التفاصيل</button>
+                    </div>
+                    <div class="card">
+                        <div class="logo1">💻</div>
+                        <div class="h3">تحليل البيانات</div>
+                        <p class="card-content">Excel و SQL و Python لتحليل البيانات وبناء التقارير.</p>
+                        <div class="card-footer"> <p class="price">1500 ج</p> <div class="weeks">⏱ 14 أسبوع</div></div>
+                        <button class="card-btn"> التفاصيل</button>
+                    </div>
+                    <div class="card">
+                        <div class="logo1">💻</div>
+                        <div class="h3">تطبيقات الموبايل</div>
+                        <p class="card-content">ابني تطبيق كامل بـ Flutter واشتغل على iOS و Android.</p>
+                        <div class="card-footer"> <p class="price">1400 ج</p> <div class="weeks">⏱ 12 أسبوع</div></div>
+                        <button class="card-btn"> التفاصيل</button>
+                         </div>
+                    </div>
+                   
+
+                  </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
