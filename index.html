@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,6 +54,36 @@
             margin: 0 auto;
             padding: 0 24px;
         }
+
+        .features-container {
+            background-color: var(--gray-light);
+            display: inline-block;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0px 24px 60px 24px;
+            text-align: center;
+
+            .h3,
+            .card-content,
+            .card {
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .card-content {
+                font-weight: bold;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 20px;
+                border: none ;
+                font-style: var(--primary-font);
+                font-weight: 400;
+                font-size: 15px;
+                color: gray;
+
+            }
+        }
+
 
         /* ===== Navbar ===== */
         .navbar {
@@ -294,7 +325,7 @@
             justify-content: space-between;
             flex-direction: row-reverse;
             padding: 20px;
-            
+
         }
 
         .stat .num {
@@ -362,34 +393,38 @@
                 width: 100%;
             }
         }
-        .section-head{
+
+        .section-head {
             justify-items: center;
             padding: 80px 16px 30px 16px;
 
 
-            .courses-eyebrow{
-             background: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 8px 16px;
-            border-radius: 999px;
-            font-size: 14px;
-            font-weight: 700;
+            .courses-eyebrow {
+                background: var(--primary-light);
+                color: var(--primary-dark);
+                padding: 8px 16px;
+                border-radius: 999px;
+                font-size: 14px;
+                font-weight: 700;
+            }
         }
-        }
-        .sm-title{
+
+        .sm-title {
             font-style: var(--primary-font);
             font-size: 16px;
             font-weight: 400px;
-           color: var(--gray);
-           
+            color: var(--gray);
+
         }
-        .first-row{
+
+        .first-row {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
             padding-top: 35px;
             padding-inline: 64px;
         }
+
         .card {
             border: 1px solid rgb(182, 180, 180);
             border-radius: 24px;
@@ -397,8 +432,9 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        .logo1{
-            border: 1px ;
+
+        .logo1 {
+            border: 1px;
             border-radius: 8px;
             background-color: rgb(204, 200, 200);
             padding: 8px 10px;
@@ -406,40 +442,44 @@
 
         }
 
-              .logo2{
-            border: 1px ;
+        .logo2 {
+            border: 1px;
             border-radius: 8px;
             background-color: rgba(254, 243, 199, 1);
             padding: 8px 10px;
             display: inline-block;
 
         }
-               .logo3{
-            border: 1px ;
+
+        .logo3 {
+            border: 1px;
             border-radius: 8px;
             background-color: rgba(220, 252, 231, 1);
             padding: 8px 10px;
             display: inline-block;
 
         }
-               .logo4{
-            border: 1px ;
+
+        .logo4 {
+            border: 1px;
             border-radius: 8px;
             background-color: rgba(238, 242, 255, 1);
             padding: 8px 10px;
             display: inline-block;
 
         }
-               .logo5{
-            border: 1px ;
+
+        .logo5 {
+            border: 1px;
             border-radius: 8px;
             background-color: rgba(254, 243, 199, 1);
             padding: 8px 10px;
             display: inline-block;
 
         }
-               .logo6{
-            border: 1px ;
+
+        .logo6 {
+            border: 1px;
             border-radius: 8px;
             background-color: rgba(220, 252, 231, 1);
             padding: 8px 10px;
@@ -447,13 +487,37 @@
 
         }
 
-        
-        .h3{
+        .logo7,
+        .logo8,
+        .logo9 {
+            margin: 0 auto;
+            background-color: rgba(238, 242, 255, 1);
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            text-align: center;
+            align-content: center;
+            /*height*/
+
+        }
+
+
+        .h3 {
             text-align: left;
             font-size: medium;
             font-style: var(--primary-font);
+            font-weight: bold;
+
         }
-        .card-content{
+
+        .h3-center {
+            text-align: center;
+            font-size: medium;
+            font-style: var(--primary-font);
+            justify-content: center;
+        }
+
+        .card-content {
             text-align: left;
             padding-top: 10px;
             padding-bottom: 20px;
@@ -464,18 +528,21 @@
             color: gray;
 
         }
-        .card-footer{
+
+        .card-footer {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
             padding-top: 15px;
             padding-bottom: 10px;
         }
-        .price{
+
+        .price {
             color: var(--primary);
         }
-        .weeks{
-             background: var(--gray-light);
+
+        .weeks {
+            background: var(--gray-light);
             color: var(--gray);
             padding: 8px 16px;
             border-radius: 999px;
@@ -484,8 +551,9 @@
 
 
         }
-        .card-btn{
-          background: var(--gray-light);
+
+        .card-btn {
+            background: var(--gray-light);
             color: black;
             padding: 10px;
             border-radius: 999px;
@@ -495,14 +563,12 @@
             width: 100%;
             border: 2px lightgray solid;
             cursor: pointer;
-            
-            
-        }
-        
-        
 
+
+        }
     </style>
 </head>
+
 <body>
     <header class="container">
         <nav class="navbar">
@@ -554,11 +620,12 @@
                     <span class="badge badge-rating">⭐ تقييم 4.9</span>
                     <div class="art-visual" role="img" aria-label="قبعة التخرج">
                         <svg viewBox="0 0 120 104" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M40,50 L40,70 C40,78 50,82 60,82 C70,82 80,78 80,70 L80,50 Z" fill="#39324F"/>
-                            <polygon points="60,18 112,40 60,62 8,40" fill="#15121D"/>
-                            <circle cx="60" cy="40" r="4.5" fill="#39324F"/>
-                            <path d="M112,40 L112,70" stroke="#F59E0B" stroke-width="4" fill="none" stroke-linecap="round"/>
-                            <circle cx="112" cy="74" r="6" fill="#F59E0B"/>
+                            <path d="M40,50 L40,70 C40,78 50,82 60,82 C70,82 80,78 80,70 L80,50 Z" fill="#39324F" />
+                            <polygon points="60,18 112,40 60,62 8,40" fill="#15121D" />
+                            <circle cx="60" cy="40" r="4.5" fill="#39324F" />
+                            <path d="M112,40 L112,70" stroke="#F59E0B" stroke-width="4" fill="none"
+                                stroke-linecap="round" />
+                            <circle cx="112" cy="74" r="6" fill="#F59E0B" />
                         </svg>
                     </div>
                     <span class="badge badge-courses">🎯 24 كورس</span>
@@ -590,80 +657,121 @@
         <section>
             <div class="container">
                 <!-- section head -->
-                 <div class="section-head">
+                <div class="section-head">
                     <p class="courses-eyebrow">الكورسات</p>
                     <h2>اختار المجال اللي يناسبك</h2>
                     <p class="sm-title">كورسات عملية 100% بمشاريع حقيقية وشهادة معتمدة في نهاية كل كورس.</p>
-                 </div>
+                </div>
 
-                 <!-- hold all cards here -->
-                  <div class="courses">
+                <!-- hold all cards here -->
+                <div class="courses">
                     <!-- first row holding 3 cards -->
                     <div class="first-row">
-                    <div class="card">
-                        <div class="logo1">💻</div>
-                        <h3 class="h3">تطوير الويب</h3>
-                        <p class="card-content">اتعلم HTML و CSS و JavaScript وابني مواقع كاملة من الصفر.</p>
-                        <div class="card-footer"> <p class="price"> 1200 ج</p> <div class="weeks"> ⏱ 12 أسبوع</div></div>
-                        <button class="card-btn"> التفاصيل</button>
-                    </div>
-                    <div class="card">
-                        <div class="logo2">🎨</div>
-                        <div class="h3">تصميم UI / UX</div>
-                        <p class="card-content">من أول الـ Wireframe لحد الـ Prototype باستخدام Figma.</p>
-                        <div class="card-footer"> <p class="price">900 ج</p> <div class="weeks">⏱ 8 أسابيع</div></div>
-                        <button class="card-btn"> التفاصيل</button>
-                    </div>
-                    <div class="card">
-                        <div class="logo3">📈</div>
-                        <div class="h3">التسويق الرقمي</div>
-                        <p class="card-content">استراتيجيات السوشيال ميديا والإعلانات الممولة والـ SEO.</p>
-                        <div class="card-footer"> <p class="price">1000 ج</p> <div class="weeks">⏱ 10 أسابيع</div></div>
-                        <button class="card-btn"> التفاصيل</button>
-                         </div>
+                        <div class="card">
+                            <div class="logo1">💻</div>
+                            <h3 class="h3">تطوير الويب</h3>
+                            <p class="card-content">اتعلم HTML و CSS و JavaScript وابني مواقع كاملة من الصفر.</p>
+                            <div class="card-footer">
+                                <p class="price"> 1200 ج</p>
+                                <div class="weeks"> ⏱ 12 أسبوع</div>
+                            </div>
+                            <button class="card-btn"> التفاصيل</button>
+                        </div>
+                        <div class="card">
+                            <div class="logo2">🎨</div>
+                            <div class="h3">تصميم UI / UX</div>
+                            <p class="card-content">من أول الـ Wireframe لحد الـ Prototype باستخدام Figma.</p>
+                            <div class="card-footer">
+                                <p class="price">900 ج</p>
+                                <div class="weeks">⏱ 8 أسابيع</div>
+                            </div>
+                            <button class="card-btn"> التفاصيل</button>
+                        </div>
+                        <div class="card">
+                            <div class="logo3">📈</div>
+                            <div class="h3">التسويق الرقمي</div>
+                            <p class="card-content">استراتيجيات السوشيال ميديا والإعلانات الممولة والـ SEO.</p>
+                            <div class="card-footer">
+                                <p class="price">1000 ج</p>
+                                <div class="weeks">⏱ 10 أسابيع</div>
+                            </div>
+                            <button class="card-btn"> التفاصيل</button>
+                        </div>
                     </div>
 
                     <!-- second row holding 3 cards -->
-                      <div class="first-row">
-                    <div class="card">
-                        <div class="logo4">🗣️</div>
-                        <h3 class="h3">اللغة الإنجليزية</h3>
-                        <p class="card-content">محادثة وقواعد من المستوى المبتدئ لحد المتقدم مع مدرّب أجنبي.</p>
-                        <div class="card-footer"> <p class="price">800 ج</p> <div class="weeks">⏱ 16 أسبوع</div></div>
-                        <button class="card-btn"> التفاصيل</button>
+                    <div class="first-row">
+                        <div class="card">
+                            <div class="logo4">🗣️</div>
+                            <h3 class="h3">اللغة الإنجليزية</h3>
+                            <p class="card-content">محادثة وقواعد من المستوى المبتدئ لحد المتقدم مع مدرّب أجنبي.</p>
+                            <div class="card-footer">
+                                <p class="price">800 ج</p>
+                                <div class="weeks">⏱ 16 أسبوع</div>
+                            </div>
+                            <button class="card-btn"> التفاصيل</button>
+                        </div>
+                        <div class="card">
+                            <div class="logo5">📊</div>
+                            <div class="h3">تحليل البيانات</div>
+                            <p class="card-content">Excel و SQL و Python لتحليل البيانات وبناء التقارير.</p>
+                            <div class="card-footer">
+                                <p class="price">1500 ج</p>
+                                <div class="weeks">⏱ 14 أسبوع</div>
+                            </div>
+                            <button class="card-btn"> التفاصيل</button>
+                        </div>
+                        <div class="card">
+                            <div class="logo6">📱</div>
+                            <div class="h3">تطبيقات الموبايل</div>
+                            <p class="card-content">ابني تطبيق كامل بـ Flutter واشتغل على iOS و Android.</p>
+                            <div class="card-footer">
+                                <p class="price">1400 ج</p>
+                                <div class="weeks">⏱ 12 أسبوع</div>
+                            </div>
+                            <button class="card-btn"> التفاصيل</button>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="logo5">📊</div>
-                        <div class="h3">تحليل البيانات</div>
-                        <p class="card-content">Excel و SQL و Python لتحليل البيانات وبناء التقارير.</p>
-                        <div class="card-footer"> <p class="price">1500 ج</p> <div class="weeks">⏱ 14 أسبوع</div></div>
-                        <button class="card-btn"> التفاصيل</button>
-                    </div>
-                    <div class="card">
-                        <div class="logo6">📱</div>
-                        <div class="h3">تطبيقات الموبايل</div>
-                        <p class="card-content">ابني تطبيق كامل بـ Flutter واشتغل على iOS و Android.</p>
-                        <div class="card-footer"> <p class="price">1400 ج</p> <div class="weeks">⏱ 12 أسبوع</div></div>
-                        <button class="card-btn"> التفاصيل</button>
-                         </div>
-                    </div>
-                   
 
-                  </div>
+
+                </div>
             </div>
         </section>
 
         <!-- features section -->
         <section>
-            <div class="container">
+            <div class="features-container">
                 <!-- section head -->
                 <div class="section-head">
                     <p class="courses-eyebrow">ليه مسار</p>
                     <h2>إيه اللي بيميّز مسار؟</h2>
                     <p class="sm-title">بنركّز على التطبيق العملي مش بس النظري.</p>
                 </div>
+                <!-- hold all cards here -->
+                <div class="courses">
+                    <!-- first row holding 3 cards -->
+                    <div class="first-row">
+                        <div class="card">
+                            <div class="logo7">🎯</div>
+                            <h3 class="h3-center">محتوى عملي</h3>
+                            <p class="card-content">مشاريع حقيقية من أول أسبوع وبورتفوليو جاهز في الآخر.</p>
+                        </div>
+                        <div class="card">
+                            <div class="logo8">👨‍🏫</div>
+                            <div class="h3-center">مدرّبين خبراء</div>
+                            <p class="card-content">كل مدرّب عنده خبرة سنوات في السوق مش بس في التدريس.</p>
+
+                        </div>
+                        <div class="card">
+                            <div class="logo9">📜</div>
+                            <div class="h3-center">شهادة معتمدة</div>
+                            <p class="card-content">شهادة معتمدة بتساعدك في سيرتك الذاتية وتقديمك للشغل.</p>
+
+                        </div>
+                    </div>
                 </div>
         </section>
     </main>
 </body>
+
 </html>
