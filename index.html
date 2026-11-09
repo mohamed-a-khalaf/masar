@@ -566,6 +566,60 @@
 
 
         }
+        .contact{
+            text-align: center;
+            background-color: white;
+            h2{
+                font: var(--primary-font);
+                font-weight: 700;
+                font-size: 36px;
+                padding-top: 15px;
+                padding-bottom: 5px;
+                color: var(--white);
+            }
+            
+            p{
+                font: var(--primary-font);
+                color: var(--white);
+                padding-top: 5px;
+                padding-bottom: 15px;
+                font-weight: 400 ;
+                font-size: 16px;
+            }
+            .cta{
+                background: linear-gradient(rgba(79, 70, 229, 1), rgba(124, 58, 237, 1));
+                width: 100%;
+                margin: 50px auto;
+                align-items: center;
+                border-radius: 10px ;
+            }
+
+            .cta-actions{
+                padding-bottom: 40px;
+                padding-top: 20px;
+                .register{
+                    width: 150px;
+                    height: 30px;
+                    border-radius: 999px;
+                    border: 2px;
+                    font: var(--primary-font);
+                    background-color: var(--primary-light);
+                    color: var(--primary-dark) ;
+                    margin: 0 auto;
+                }
+
+                .contact-us{
+                    width: 100px;
+                    height: 30px;
+                    border-radius: 999px;
+                    border: 2px rgba(255, 255, 255, 0.6) solid;
+                    font: var(--primary-font);
+                    background-color: transparent;
+                    color: var(--primary-light)  ;
+                    margin: 0 auto;
+                }
+            }
+        }
     </style>
 </head>
 
@@ -771,6 +825,18 @@
                     </div>
                 </div>
         </section>
+
+        <!-- contact section -->
+         <section class="contact">
+            <div class="cta">
+                <h2>جاهز تبدأ رحلتك؟</h2>
+                <p>احجز مكانك في الترم الجديد — الأماكن محدودة.</p>
+                <div class="cta-actions">
+                    <button class="register">سجّل الآن مجانًا</button>
+                    <button class="contact-us">اتصل بينا</button>
+                </div>
+            </div>
+         </section>
     </main>
 </body>
 
