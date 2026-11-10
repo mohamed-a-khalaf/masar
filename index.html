@@ -75,7 +75,7 @@
                 text-align: center;
                 padding-top: 10px;
                 padding-bottom: 20px;
-                border: none ;
+                border: none;
                 font-style: var(--primary-font);
                 font-weight: 400;
                 font-size: 15px;
@@ -566,10 +566,12 @@
 
 
         }
-        .contact{
+
+        .contact {
             text-align: center;
             background-color: white;
-            h2{
+
+            h2 {
                 font: var(--primary-font);
                 font-weight: 700;
                 font-size: 36px;
@@ -577,47 +579,84 @@
                 padding-bottom: 5px;
                 color: var(--white);
             }
-            
-            p{
+
+            p {
                 font: var(--primary-font);
                 color: var(--white);
                 padding-top: 5px;
                 padding-bottom: 15px;
-                font-weight: 400 ;
+                font-weight: 400;
                 font-size: 16px;
             }
-            .cta{
+
+            .cta {
                 background: linear-gradient(rgba(79, 70, 229, 1), rgba(124, 58, 237, 1));
-                width: 100%;
+                width: 96%;
                 margin: 50px auto;
                 align-items: center;
-                border-radius: 10px ;
+                border-radius: 10px;
             }
 
-            .cta-actions{
+            .cta-actions {
                 padding-bottom: 40px;
                 padding-top: 20px;
-                .register{
+
+                .register {
                     width: 150px;
                     height: 30px;
                     border-radius: 999px;
                     border: 2px;
                     font: var(--primary-font);
                     background-color: var(--primary-light);
-                    color: var(--primary-dark) ;
+                    color: var(--primary-dark);
                     margin: 0 auto;
                 }
 
-                .contact-us{
+                .contact-us {
                     width: 100px;
                     height: 30px;
                     border-radius: 999px;
                     border: 2px rgba(255, 255, 255, 0.6) solid;
                     font: var(--primary-font);
                     background-color: transparent;
-                    color: var(--primary-light)  ;
+                    color: var(--primary-light);
                     margin: 0 auto;
                 }
+            }
+        }
+
+        .footer {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-content: right;
+            font: var(--primary-font);
+            background-color: rgba(17, 24, 39, 1);
+            color: rgba(156, 163, 175, 1);
+            .footer-one{
+                max-width: 300px;
+            }
+            .footer-one, .footer-two, .footer-three, .footer-four{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            h5,
+            span {
+                font-size: 16px;
+                font-weight: 700px;
+                color: var(--primary-light);
+            }
+
+            a,
+            p {
+                
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 400;
+                color: rgba(156, 163, 175, 1);
+
             }
         }
     </style>
@@ -824,10 +863,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- contact section -->
-         <section class="contact">
+        <section class="contact">
             <div class="cta">
                 <h2>جاهز تبدأ رحلتك؟</h2>
                 <p>احجز مكانك في الترم الجديد — الأماكن محدودة.</p>
@@ -836,7 +876,44 @@
                     <button class="contact-us">اتصل بينا</button>
                 </div>
             </div>
-         </section>
+        </section>
+
+        <!-- footer section -->
+        <section class="footer">
+            <!-- right side of the screen, has the logo and a short statement -->
+            <div class="footer-one">
+                <img src="Public/logo.png" alt="Masar logo" width="40px" height="40px">
+                <span>مسار</span>
+                <p>مركز تعليمي بيقدّم كورسات عملية في مجالات مختلفة، هدفنا إنك تتعلم حاجة تفيدك في شغلك.</p>
+            </div>
+
+            <!-- courses section / footer 2 -->
+            <div class="footer-two">
+                <h5>الكورسات</h5>
+                <a href="#">تطوير الويب</a>
+                <a href="#">تصميم UI/UX</a>
+                <a href="#">التسويق الرقمي</a>
+                <a href="#">تحليل البيانات</a>
+            </div>
+
+            <!-- centre section / footer 3 -->
+            <div class="footer-three">
+                <h5>المركز</h5>
+                <a href="#">عن مسار</a>
+                <a href="#">المدرّبين</a>
+                <a href="#">الأسئلة الشائعة</a>
+                <a href="#">الوظائف</a>
+            </div>
+
+            <!-- contact section / footer 4 -->
+            <div class="footer-four">
+                <h5>تواصل</h5>
+                <p>📞 0100 000 0000</p>
+                <p>✉️ hello@masar.tst</p>
+                <p>📍 القاهرة، مصر</p>
+            </div>
+
+        </section>
     </main>
 </body>
 
