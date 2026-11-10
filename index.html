@@ -633,10 +633,15 @@
             font: var(--primary-font);
             background-color: rgba(17, 24, 39, 1);
             color: rgba(156, 163, 175, 1);
-            .footer-one{
+
+            .footer-one {
                 max-width: 300px;
             }
-            .footer-one, .footer-two, .footer-three, .footer-four{
+
+            .footer-one,
+            .footer-two,
+            .footer-three,
+            .footer-four {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
@@ -651,12 +656,48 @@
 
             a,
             p {
-                
+
                 text-decoration: none;
                 font-size: 15px;
                 font-weight: 400;
                 color: rgba(156, 163, 175, 1);
 
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* cards: 1 column, trim the big side padding */
+            .first-row {
+                grid-template-columns: 1fr;
+                padding-inline: 16px;
+            }
+
+            /* features box fills the screen  */
+            .features-container {
+                display: block;
+                width: 100%;
+            }
+
+            /* footer stacks vertically */
+            .footer {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            /* stats wrap into 2x2 */
+            .stats {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .stat {
+                flex: 1 1 40%;
+                text-align: center;
             }
         }
     </style>
